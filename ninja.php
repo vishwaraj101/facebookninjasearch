@@ -4,7 +4,8 @@
 include_once('calls_with_balls.php'); //include all the calls 
 
 
-$id=$_POST['id']; // get user id via post param.
+$name=$_POST['name']; // get user name id
+$id=$_POST['id'];
 
  ?>
 
@@ -45,36 +46,39 @@ $id=$_POST['id']; // get user id via post param.
 
  <center>
 
-
+<form action="ninja.php" method="POST">
+Enter User Name : <input name="name" type="text">
+<button>get the id </button>
+</form>
 </br>
 <form action="ninja.php" method="POST">
-Enter User Id : <input name="id" type="text">
 
+<h3>Use this id --> <?php echo '<a href="userid">'.get_fb_id($name).'</a>' ?></h3>
+Enter User id : <input name="id" type="text">
 <button>Find</button> 
 
 <!--All the href links-->
 </br>
 
-<br><a onclick="" href="<?php all_user_posts($id); ?>">All posts including birthday wishes ?</a></br>
-<br><a onclick="" href="<?php get_pages_liked($id); ?>">What person likes ?</a></br>
-<br><a onclick="" href="<?php get_place_visited($id); ?>">Recent Place Visited?</a> </br>
-<br><a onclick="" href="<?php get_photos_byperson($id); ?>">All shared Photos</a></br>
-<br><a onclick="" href="<?php get_place_visited($id); ?>">Photos liked by him?</a> </br>
-<br><a onclick="" href="<?php all_photos_user_tagged_in($id); ?>">Photos Tagged in ?</a></br>
-<br><a onclick="" href="<?php photos_user_commented_on($id); ?>">Photos commented on ?</a></br>
+<br><a  target=_blank href="<?php all_user_posts($id); ?>">All posts including birthday wishes ?</a></br>
+<br><a  target=_blank href="<?php get_pages_liked($id); ?>">What person likes ?</a></br>
+<br><a target=_blank href="<?php get_place_visited($id); ?>">Recent Place Visited?</a> </br>
+<br><a target=_blank href="<?php get_photos_byperson($id); ?>">All shared Photos</a></br>
+<br><a target=_blank href="<?php get_place_visited($id); ?>">Photos liked by him?</a> </br>
+<br><a target=_blank href="<?php all_photos_user_tagged_in($id); ?>">Photos Tagged in ?</a></br>
+<br><a target=_blank href="<?php photos_user_commented_on($id); ?>">Photos commented on ?</a></br>
 
-<br><a onclick="" href="<?php posts_user_tagged_in($id); ?>">Posts in which he is tagged ?</a> </br>
-<br><a onclick="" href="<?php videos_user_related_with($id); ?>">Videos user related with ?</a> </br>
-<br><a onclick="" href="<?php videos_liked_by_user($id); ?>">Videos liked ?</a> </br>
-<br><a onclick="" href="<?php get_friends($id); ?>">User Friends ?</a> </br>
-<br><a onclick="" href="<?php groups_joined_by_user($id); ?>">Groups joined by user ?</a></br>
-<br><a onclick="" href="<?php get_friends($id); ?>">User Friends ?</a> </br>
-<br><a onclick="" href="<?php get_relatives($id); ?>">Relatives of the User?</a> </br>
-<br><a onclick="" href="<?php event_joined($id); ?>">Event user joined ?</a> </br>
-<br><a onclick="" href="<?php event_invited_in($id); ?>">Event invites to the user ?</a> </br>
+<br><a target=_blank href="<?php posts_user_tagged_in($id); ?>">Posts in which he is tagged ?</a> </br>
+<br><a target=_blank href="<?php videos_user_related_with($id); ?>">Videos user related with ?</a> </br>
+<br><a target=_blank href="<?php videos_liked_by_user($id); ?>">Videos liked ?</a> </br>
+<br><a target=_blank href="<?php get_friends($id); ?>">User Friends ?</a> </br>
+<br><a target=_blank href="<?php groups_joined_by_user($id); ?>">Groups joined by user ?</a></br>
+<br><a target=_blank href="<?php get_friends($id); ?>">User Friends ?</a> </br>
+<br><a target=_blank href="<?php get_relatives($id); ?>">Relatives of the User?</a> </br>
+<br><a target=_blank href="<?php event_joined($id); ?>">Event user joined ?</a> </br>
+<br><a target=_blank href="<?php event_invited_in($id); ?>">Event invites to the user ?</a> </br>
 
 </center>
-
 
 </body>
 </html>

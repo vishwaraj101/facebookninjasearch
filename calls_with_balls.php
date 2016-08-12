@@ -1,5 +1,29 @@
 <?php 
 //coded by https://www.facebook.com/vicdjrocks
+
+
+function get_fb_id($name){
+
+$url = 'http://graph.tips/profile_id.php?username='.$name.'';
+
+$cURL = curl_init();
+
+curl_setopt($cURL, CURLOPT_URL, $url);
+curl_setopt($cURL, CURLOPT_HTTPGET, true);
+$response = curl_exec($cURL);
+$result=json_decode($response,true);
+$id=$result["id"];
+curl_close($cURL);
+
+
+}
+
+
+
+
+
+
+
  function all_user_posts($id){
 	echo "https://www.facebook.com/search/".$id."/stories-by";
 }

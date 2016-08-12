@@ -11,7 +11,7 @@ $company=$_POST['company'];
 
 function get_singles($gender,$place,$likes){
 
-	echo "https://www.facebook.com/search/top/?q=single%20".$gender."%20in%20".$place."%20who%20likes%20".$likes."&__mref=message_bubble";
+	echo "https://www.facebook.com/search/top/?q=single ".$gender." in ".$place." who likes ".$likes."&__mref=message_bubble";
 }
 
 
@@ -44,6 +44,7 @@ echo "https://www.facebook.com/search/top/?q=".$school_key."%20who%20went%20to%2
 <form action="singles.php" method="POST">
 Single :
 <select name="gender">
+
 <option value="girls">girls</option>
 <option value="boys">boys</option>
 </select>
@@ -77,10 +78,11 @@ who likes: <input name="likes" type="text" >
 </select>
 Who work at: 
 <input name="company" type="text">
-<button>Show employees</button>
+<button name="show">Show employees</button>
 
 </form>
-<a href="<?php find_employees($key,$company);?>">Show Employees</a>
+
+<a  target=_blank href="<?php find_employees($emp_key,$company);?>">Show Employees</a>
 
 
 <h2>Search for old school mates </h2>
@@ -93,15 +95,18 @@ Who work at:
 	<option value="male">Males</option>
 	<option value="female">Females</option>
 </select>
+
 School attended: 
 <input name="school" type="text">
+
 <button>Search</button>
 
 </form>
-<a href="<?php find_school_mates($school_key,$school);?>">Show old mates</a>
+<a  target=_blank href="<?php find_school_mates($school_key,$school);?>">Show old mates</a>
 </br>
 <br>
-<h4>Example : girls Near "bhopal" who likes "cake" hit search and click show singles </h4>
+<h4>Example : People who work at "google"</h4>
+<h4>Example : Girls :P near "bhopal" who likes -->"cake" hit search and click show singles </h4>
 
 
 </center>

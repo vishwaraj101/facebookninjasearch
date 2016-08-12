@@ -1,7 +1,26 @@
 <?php 
+$uname=$_POST['uname'];
+$fname=$_POST['fname'];
 
 $id=$_POST['id'];
 $f_id=$_POST['f_id'];
+
+
+function get_fb_id($name){
+
+$url = 'http://graph.tips/profile_id.php?username='.$name.'';
+
+$cURL = curl_init();
+
+curl_setopt($cURL, CURLOPT_URL, $url);
+curl_setopt($cURL, CURLOPT_HTTPGET, true);
+$response = curl_exec($cURL);
+$response["id"];
+curl_close($cURL);
+
+
+}
+
 
 function common_likes($id,$f_id){
 
@@ -39,8 +58,23 @@ echo "https://www.facebook.com/search/".$id."/photos-liked/".$f_id."/photos-like
  </head>
  <body>
  
-<center>
+
+
+ <center>
 	<h2>Common things b/w you and your friend</h2> </br>
+<form action="common.php" method="POST">
+
+
+Your name:<input name="uname" type="text">
+Friend name:<input name="fname"type="text">
+<button>getid</button>
+
+</form>
+
+<h2>Your id   <?php echo '<a href="">'.get_fb_id($uname).'</a>' ?></h2>
+<h2>Friend id <?php echo '<a href="">'.get_fb_id($fname).'</a>' ?></h2>
+<center>
+	
 <form action="common.php" method="POST">
 
 
@@ -50,10 +84,10 @@ Friend id:<input name="f_id"type="text">
 
 </form>
 
-<a href="<?php common_likes($id,$f_id);?>">Page you both Liked</a> </br>
-<a href="<?php photos($id,$f_id);?>">Photos you both Liked</a></br>
-<a href="<?php photo_both_tagged_in($id,$f_id);?>">Photos both tagged in</a></br>
-<a href="<?php post_commented_on($id,$f_id);?>">Post you both commented on</a></br>
+<a  target=_blank href="<?php common_likes($id,$f_id);?>">Page you both Liked</a> </br>
+<a  target=_blank href="<?php photos($id,$f_id);?>">Photos you both Liked</a></br>
+<a  target=_blank href="<?php photo_both_tagged_in($id,$f_id);?>">Photos both tagged in</a></br>
+<a  target=_blank href="<?php post_commented_on($id,$f_id);?>">Post you both commented on</a></br>
 
 </center>
  </body>
