@@ -51,12 +51,12 @@ $id=htmlentities($_POST['id'], ENT_QUOTES);
 
  <center>
 
-<form action="ninja.php" method="POST">
+<form action="index.php" method="POST">
 Enter User Name : <input name="name" type="text">
 <button>get the id </button>
 </form>
 </br>
-<form action="ninja.php" method="POST">
+<form action="index.php" method="POST">
 
 <h3>Use this id --> <?php echo '<a href="userid">'.get_fb_id($name).'</a>' ?> then click on links</h3>
 Enter User id : <input name="id" type="text">
