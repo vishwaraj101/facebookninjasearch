@@ -4,8 +4,8 @@
 include_once('calls_with_balls.php'); //include all the calls 
 
 
-$name=htmlentities($_POST['name']); // get user name id
-$id=htmlentities($_POST['id']);
+$name=htmlentities($_POST['name'], ENT_QUOTES); // get user name id
+$id=htmlentities($_POST['id'], ENT_QUOTES);
 
 
 
