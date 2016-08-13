@@ -32,3 +32,5 @@ There are currently 1.49 billion active Facebook users, so trying to find someon
 
 2.)you also don't need to type entire queries just type the person name and the queries will be ready related to the person well the real pain is of clicking !
 
+###Credits [OsandaMalith](https://github.com/OsandaMalith)for fixing xss issues 
+
