@@ -25,6 +25,9 @@ You can also take a more general approach to a people-focused search. For exampl
 
 There are currently 1.49 billion active Facebook users, so trying to find someone named Paul, for example, is like finding a needle in a haystack factory. Needless to say, the more information you have on someone, the better.
 
-this little tool will make it easy for you to fetch information about any person,friends without actually using graph api 
-+ you don't need to type entire queries just type the person name and the queries will be ready related to the person well the real pain is of clicking !
+####This little tool will make it easy for you to 
+
+1.)fetch information about any person,friends without actually using graph api 
+
+2.)you also don't need to type entire queries just type the person name and the queries will be ready related to the person well the real pain is of clicking !
 
