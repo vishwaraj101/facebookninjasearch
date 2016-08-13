@@ -110,5 +110,6 @@ School attended:
 
 
 </center>
+<footer><?php include('hit.php'); ?></footer>
  </body>
  </html>

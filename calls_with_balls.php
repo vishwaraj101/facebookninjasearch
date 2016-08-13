@@ -11,8 +11,7 @@ $cURL = curl_init();
 curl_setopt($cURL, CURLOPT_URL, $url);
 curl_setopt($cURL, CURLOPT_HTTPGET, true);
 $response = curl_exec($cURL);
-$result=json_decode($response,true);
-$id=$result["id"];
+$response["id"];
 curl_close($cURL);
 
 

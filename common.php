@@ -90,5 +90,7 @@ Friend id:<input name="f_id"type="text">
 <a  target=_blank href="<?php post_commented_on($id,$f_id);?>">Post you both commented on</a></br>
 
 </center>
+</br>
+<footer><?php include('hit.php'); ?></footer>
  </body>
  </html>
