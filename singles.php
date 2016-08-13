@@ -1,12 +1,12 @@
 <?php 
 
 
-$gender=$_POST['gender'];
-$place=$_POST['place'];
-$likes=$_POST['likes'];
-$emp_key=$_POST['emp_key'];
-$school_key=$_POST['school_key'];
-$company=$_POST['company'];
+$gender=htmlentities($_POST['gender'], ENT_QUOTES);
+$place=htmlentities($_POST['place'], ENT_QUOTES);
+$likes=htmlentities($_POST['likes'], ENT_QUOTES);
+$emp_key=htmlentities($_POST['emp_key'], ENT_QUOTES);
+$school_key=htmlentities($_POST['school_key'], ENT_QUOTES);
+$company=htmlentities($_POST['company'], ENT_QUOTES);
 
 
 function get_singles($gender,$place,$likes){
