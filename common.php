@@ -1,9 +1,9 @@
 <?php 
-$uname=$_POST['uname'];
-$fname=$_POST['fname'];
+$uname=htmlEntities($_POST['uname'], ENT_QUOTES);
+$fname=htmlEntities($_POST['fname'], ENT_QUOTES);
 
-$id=$_POST['id'];
-$f_id=$_POST['f_id'];
+$id=htmlEntities($_POST['id'], ENT_QUOTES);
+$f_id=htmlEntities($_POST['f_id'], ENT_QUOTES);
 
 
 function get_fb_id($name){
