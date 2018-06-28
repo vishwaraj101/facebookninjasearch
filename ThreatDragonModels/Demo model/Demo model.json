@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "title": "Demo model",
+    "owner": "vraj"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "demo model",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "vraj"
+  }
+}
